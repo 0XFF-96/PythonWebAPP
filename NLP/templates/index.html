@@ -1,0 +1,39 @@
+<!DOCYPE.html>
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> example</title>
+    </head>
+
+    <body>
+        <h1>  hello <h1>
+        
+
+        <h2> plese , Post Your question here <h2>
+
+        <h3> -----------------------------   <h2>
+            
+                <form action="message" method="post">
+                <textarea name="message" rows="8" cols="40"></textarea>
+
+                <button type="submit"> POST submit</button>
+            </form>
+            
+
+
+
+
+
+
+        <h3> -----------------------------   <h3>
+        {% if name %}
+            <h1> This is answer {{ name }} ! </h1>
+        {% else %}
+            <h1> hello World !, NO answer return  </h1>
+        {% endif %}
+
+    </body>
+</html>
+
