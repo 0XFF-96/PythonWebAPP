@@ -1,0 +1,23 @@
+This is my code for the course in Udactiy named Full stack foundation!
+
+starting at 4-23
+
+1\Buuild your own web server 
+
+Create your own web server by making a file called webserver.py and following the steps from the previous videos.Example code is available in the instructor notes . 
+
+
+2\ What is Port Forwarding ?
+
+3\Add the 'hola' functinlity to your web server
+
+    make your webserver responds to the /hola URL as well
+
+    I have attempted this challenge and am ready to continue
+
+4\ Add POST feature
+
+    posts are what allow the user to customize their web experience.
+    post reqeusts from a browser require data to be submitted , lie with a form ....
+
+
