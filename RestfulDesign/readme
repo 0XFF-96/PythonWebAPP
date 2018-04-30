@@ -1,0 +1,63 @@
+Designing RESTful.4.25
+
+
+
+
+    4-25
+    Flask 
+    SQLalchemy 
+
+    1\An understanding of OAuth2 ,flows will also be very helpful.
+    2\How to develop a web app in OAuth2.
+
+
+
+## Resource
+
+    Google Developers Foursquare.
+##how APIs can communication with other machine ?!
+
+    1\why is this important
+    2\what do companies gain by allowing their content to be accessible via
+        API.
+
+    3\
+
+
+##OSI system ! 
+
+   
+## Simple Object Access Protocol 
+
+  1\ XML . .. SOAP uses the extensible markup language to transmit sets of 
+    information...
+    
+  2\ REST .. is more a set of guide line 
+  3\ how do we message formatting 
+  4\ XML  and JSON 
+        eXtensible markup language 
+        JavaScript Object Notation
+
+  5\ JSON XML SOAP REST , 
+
+  6\Design Restful API...
+
+
+  7\ Can you name some Constraints of using REST ?
+
+  8\A truly RESTful architecture, however, is not allowed to retain informat    ion
+
+  9\ you will see how using tokens is a good way to have a stateless design
+    that 
+
+  10\ Why Restful should be stateless ?
+        
+        It might appear easier to design a server that isn't stateless.
+# Use  API document
+
+        use goole maps  APID documnet to geocode the following cities to latitude....
+
+
+## Making an EndPoint with Flask Quiz
+
+

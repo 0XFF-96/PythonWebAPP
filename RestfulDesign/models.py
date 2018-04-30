@@ -1,0 +1,65 @@
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import decalartive_base
+from sqlalchemy.orm import relationship, sessionmaker
+from sqlalchemy import create_engine
+from passlib.apps import custom_app_context as pwd_context
+import random, string
+from itsdangerous import(TimedJSON) as 
+
+
+Base = declarative_base()
+secret_key = ''.join(random.choice(string.ascii_uppercase + string.digits)
+
+for x in xrange(32))
+
+class User(Base):
+
+    __tablename__='user'
+    id = Column(Integer, primary_key=True)
+    useranme = Column(String(32), index=True)
+    password_hash = Column(String(64))
+
+    def hash_password(self, password):
+        sefl.password_hash = pwd_context.encrypt(password)
+
+    def verify_password(self, password):
+        return pwd_context.verity(password, self.password_hash)
+    def generate_auth_token(self, expiration=600):
+        s = Serializer(secret_key, expirted_in = expiration)
+        return s.dumps({'id':self.id})
+
+    @staticmethod
+    def verify_auth_token(token):
+        s = Serializer(secret_key)
+        try:
+            data = s.loads(token)
+        except SignatureExpired:
+            return None
+        except BadSignature:
+            return None
+        user_id = data['id']
+        return user_id 
+
+class Product(Base):
+    __tablename__='product'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    category = Column(String)
+    price = Column(String)
+
+    @property
+    def serialize(self):
+        ''' Return object data in easily serializeable format'''
+        return {
+                'name': self.name, 
+                'category': self.category,
+                'price':self.price
+                }
+
+engine = create_engine('sqlite:///regalTree.db')
+
+Base.metadata.create_all(engine)
+
+
+

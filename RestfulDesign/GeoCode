@@ -1,0 +1,23 @@
+import httplib2 
+import json
+
+
+def getGeocodeLocation(inputString):
+
+    #Use Google Maps to convert a location into Latitute/Longitute cooridinates
+    # FORMAT : https://maps.googleapis.com/maps/api/geocode/json?
+        address=16000+Amphitheatre + Parkway, +Mountain+View + CA%key=A,PI_KKEY.
+
+    google_api_key = 'PASTE_YOUR_KEY_HERE'
+    locationString = inputString.replace(",", '+')
+    url = ('https;//maps.gooleapis.com/maps/api/geocode/json?
+        address=....'%(locationString, goole_api_key))
+
+    h = httplib2.Http()
+    result = json.loads(h.request(url, 'GET')[1])
+    latitude = result['result'][0]['geometry']['location']['lat']
+    longitude = result['result'][0]['geometry']['location']['lng']
+
+    return (latitude, longitude)
+
+

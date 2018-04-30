@@ -20,4 +20,73 @@ Create your own web server by making a file called webserver.py and following th
     posts are what allow the user to customize their web experience.
     post reqeusts from a browser require data to be submitted , lie with a form ....
 
+5\ Add more features to our website 
+
+        1. List out all restaurants 
+        2. add edit & delete links
+        3. create new restaurants 
+        4. remove a restaurant 
+        5. delete a restaurant 
+
+    API design: 
+        /localhost:8080/restaurants ..
+        /localhost:8080.restaurants/new
+        /restartant/id/edit/
+
+        clicking 'delete' takes a user to a confirmation page that then send        a post command to the database to delete the selected restaurant.
+
+
+    Hints import nessary modules 
+        * user print statements to debug 
+        * view page source in browser.
+        
+        * reconstruct your do_GET and do_POST methods such that they perform            the nessary CRUD operations to create teh desired functionality
+        * Use print statements are simple ways to check how code flows and t                the value of variables...
+
+
+##Reconstructing 
+
+    * A few times I say backslash '\' in this course, all slashes in this 
+            course should be forward slashes '/'
+
+    *  DBSessin = sessinmaker(bind=engine)
+        session =DBSession()
+        objective 1 solution cna be found here
+
+
+## Developing with frameworks 
+
+    Createing a website from scratch really shows that you have a good grasp    of underlying programming concepts and are able to utilize the power of     Python .
+
+    * Frameworks are collections of code that simplify the web developments         process.
+    * wiki web_application frame work 
+    * Think of a framework as a box of prepared cake mix.
+    * We could make a cake ....
+
+
+## Use the Flask ,to create a 
+
+    * Database
+    * Templates
+    * url_for
+    * forms 
+    * message 
+    * flashing 
+    * JSOn 
+    * Styling
+
+## Ruel for URL....
+
+URLRULE = 'path/<type:variable_name>/path'
+
+    <int:restruant_id>
+
+
+## Understanding Templates in Flask
+
+
+    In the instructor notes, You will find smaple template here called menu, .Take a look at and see if you cna figure out how Flask accomodates for python code insider of an HTML documnet. You ...
+
+
+## But sometimes all that needs to be comunicated is information.
 
