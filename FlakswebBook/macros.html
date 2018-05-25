@@ -1,0 +1,34 @@
+{% macro render_form(form, url) %}
+
+<form method ="POST" action="{{ url }}">
+    {{ form.csrf_token }}
+    {% for field in form %}
+        {% for field in form %}
+        {{''}}
+        {% elif field.type == 'SubmitField' %}
+        {{ form.submit(class='btn btn-primary', type='submit') }}
+        {% elif field.type == 'BooleanField' %}
+
+        <div class='checkbox'>
+            <label>{{ field() }} {{ field.label.text }} </label>
+        </div>
+
+        <div class="form-group {% if field.errors %} has-error{% enfif %}">
+            {{ field.label }} {{ field(class='form-control') }}
+            {% if field.error %}
+            <span class='help-block'>{{ error }} </span>
+            {% endif %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </form>
+    {% endmacro %}
+
+{% macro render_pagination(pagination, endpoint) %}
+<nav class='nav-pagintion' aria-label="page namevigation'>
+
+<h4> create course<h4>
+ 
+{{ render_form(form, url_for('admin.craete_course')) }}
+
+@admin.route('/user
